@@ -1,4 +1,5 @@
 require "selenium-webdriver"
+require "date"
 
 class IphoneRusher
   attr_reader :driver, :wait
@@ -116,7 +117,7 @@ class IphoneRusher
 
   def select_store
     driver.find_elements(css: '.as-storelocator-searchresultlist .as-storelocator-searchitem').first.click
-    drop = driver.find_element(id: '2021-10-19timeWindows')
+    drop = driver.find_element(id: "#{Date.today.to_s}timeWindows")
     choose = Selenium::WebDriver::Support::Select.new(drop)
     choose.select_by(:index, 2)
     driver.find_element(id: 'rs-checkout-continue-button-bottom').click
