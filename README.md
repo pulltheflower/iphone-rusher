@@ -11,4 +11,4 @@
 # 需要提前将想买的iphone加入购物车
 
 # Run
-`ruby iphone-rusher.rb`
+`ruby iphone_rusher.rb`
