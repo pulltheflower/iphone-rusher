@@ -100,7 +100,7 @@ class IphoneRusher
   
 
   def any_store_selectable?
-    !element_exist?(css: '.is-error')
+    !element_exist?(css: '.is-error') && element_exist?(css: '.as-storelocator-searchresultlist .as-storelocator-searchitem')
   end
 
   def element_exist?(xpath: nil, css: nil)
